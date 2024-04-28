@@ -51,7 +51,7 @@ class Sms_model extends CI_Model {
 				$api=array();
 				foreach($q1->result() as $res1){
 					if($res1->info =='message'){
-						$api = array_merge($api, [$res1->key =>  urlencode($message)]);
+						$api = array_merge($api, [$res1->key =>  $message]);
 
 					}
 					else if($res1->info =='mobile'){
